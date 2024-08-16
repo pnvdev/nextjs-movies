@@ -4,7 +4,7 @@ This is a Next.js application that allows users to search for movies using the T
 
 ## Features
 
-- **Search Functionality:** Users can search for movies by title.
+- **Search Functionality: Users can search for movies by title using URL search parameters instead of useState, allowing direct linking to specific searches.
 - **Debounced Search:** The app uses debounced input to minimize unnecessary API calls.
 - **Responsive Design:** The layout adapts to different screen sizes.
 - **Dynamic Routing:** Each movie links to a detailed page using Next.js dynamic routing.
