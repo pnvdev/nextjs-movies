@@ -9,7 +9,7 @@ export async function Header() {
       <div className="flex items-center justify-between mb-4 md:mb-0">
         <h1 className="leading-none text-2xl text-grey-darkest">
           <Link
-            className="no-underline text-grey-darkest hover:text-black"
+            className="no-underline text-grey-darkest hover:text-gray-400"
             href="/"
           >
             Next.js Movies
@@ -33,7 +33,7 @@ export async function Header() {
         <ul className="list-reset md:flex md:items-center">
           <li className="md:ml-4">
             <a
-              className="block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0"
+              className="block no-underline hover:underline py-2 text-grey-darkest hover:text-gray-400 md:border-none md:p-0"
               href="#"
             >
               Categories
@@ -41,7 +41,7 @@ export async function Header() {
           </li>
           <li className="md:ml-4">
             <a
-              className="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0"
+              className="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-gray-400 md:border-none md:p-0"
               href="#"
             >
               Movies
@@ -49,7 +49,7 @@ export async function Header() {
           </li>
           <li className="md:ml-4">
             <a
-              className="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-black md:border-none md:p-0"
+              className="border-t block no-underline hover:underline py-2 text-grey-darkest hover:text-gray-400 md:border-none md:p-0"
               href="#"
             >
               About

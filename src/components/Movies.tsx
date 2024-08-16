@@ -28,10 +28,19 @@ export async function Movies({ searchParams }: MoviesProps) {
     },
   };
 
-  const movies = await fetch(
-    `https://api.themoviedb.org/3/search/movie?query=${search}&include_adult=false&language=en-US&page=1`,
-    options
-  );
+  let movies;
+
+  if (!search) {
+    movies = await fetch(
+      "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
+      options
+    );
+  } else {
+    movies = await fetch(
+      `https://api.themoviedb.org/3/search/movie?query=${search}&include_adult=false&language=en-US&page=1`,
+      options
+    );
+  }
 
   const { results }: MoviesResponse = await movies.json();
 
@@ -44,7 +53,7 @@ export async function Movies({ searchParams }: MoviesProps) {
             key={movie.id}
             className="block bg-white shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105"
           >
-            <div className="relative h-48 w-full">
+            <div className="relative h-96 w-full">
               <Image
                 src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                 layout="fill"
